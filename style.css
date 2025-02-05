@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer Styling */
+footer {
+  width: 100%;
+  background-color: rgb(29, 27, 27);
+  color: white;
+}
+
+/* Top Section */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(29, 27, 27);
+  flex-wrap: wrap;
+}
+
+.top span {
+  color: beige;
+  font-size: 1.2rem;
+  position: relative;
+  left: 1250px;
+  margin-right: 20px; /* Space between text and icons */
+}
+
+/* Social Media Icons Container */
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icons div {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+/* Main Footer Sections */
+.main {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.sections {
+  color: aliceblue;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.sections h1 {
+  width: fit-content;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, cyan, blue, yellow) 1;
+}
+
+/* Section Title */
+.pp {
+  text-transform: capitalize;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+/* Footer Links */
+ul {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+li {
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.lii {
+  display: flex; /* Ensures the element respects fit-content */
+  position: relative;
+  width: fit-content;
+}
+
+.lii::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(to right, cyan, blue, yellow);
+  transition: all 0.5s ease-in-out;
+}
+
+.lii:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+/* Border between sections */
+.pp2 {
+  border-left: 2px solid white;
+  padding-left: 20px;
+}
+
+/* Section Title Styling */
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Bottom Section */
+.bottom {
+  border-top: 2px solid white;
+  display: flex;
+  background-color: rgb(29, 27, 27);
+  height: 100px;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.left {
+  display: flex;
+  gap: 20px;
+}
+
+.left p {
+  cursor: pointer;
+}
+
+.left p:hover {
+  border-bottom: 2px solid white;
+}
+
+.right {
+  text-align: right;
+}
+
+.padd {
+  background-color: rgb(29, 27, 27);
+  padding: 0px 20px;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .top span {
+    left: 0;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .sections {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .pp2 {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .bottom {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .left {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .top span {
+    font-size: 1rem;
+  }
+
+  .icons div {
+    width: 25px;
+    height: 25px;
+  }
+
+  .sections h1 {
+    font-size: 1.2rem;
+  }
+
+  .lii {
+    font-size: 0.9rem;
+  }
+
+  .bottom {
+    padding: 10px;
+  }
+
+  .left p,
+  .right p {
+    font-size: 0.9rem;
+  }
+}
